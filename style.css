@@ -1,0 +1,54 @@
+.banner {
+    height: 91vh;
+    background-color: skyblue;
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), url(images/gambaranim.jpg)); */
+    background: url(images/gotoubun.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontenBanner {
+    background-color: black;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .gambarBuku {
+        width: 214px;
+        height: 301px;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .gambarBuku {
+        width: 304px;
+        height: 417px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .gambarBuku {
+        width: 244px;
+        height: 343px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .gambarBuku {
+        width: 259px;
+        height: 364px;
+    }
+}

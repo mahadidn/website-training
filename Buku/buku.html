@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="../bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-icons-1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Navbar" width="50px">
+                Buku
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start align-items-md-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mb-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Cari Buku" aria-label="Search" id="searchBuku">
+                        <button class="btn btn-success" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Daftar Buku -->
+    <div class="container-fluid mb-5 mt-3">
+        <div class="container">
+            <h2 class="text-center mb-5">Buku-Buku</h2>
+
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSejarah">
+                                Buku Sejarah
+                                <span class="badge bg-primary rounded-pill" id="totalSejarah"></span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikNovel">
+                                Buku Novel
+                                <span class="badge bg-primary rounded-pill" id="totalNovel"></span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikAgama">
+                                Buku Agama
+                                <span class="badge bg-primary rounded-pill" id="totalAgama"></span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSains">
+                                Buku Sains
+                                <span class="badge bg-primary rounded-pill" id="totalSains"></span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSemuaBuku">
+                                Semua Buku
+                                <span class="badge bg-primary rounded-pill" id="totalBuku"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row" id="bukuBuku">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    
+    
+    <script type="module">
+
+        // import {bukuSejarah, bukuAgama, bukuNovel, bukuSains} from "./scriptBuku.js"
+
+        const bukuSejarah = {
+            "judul": [
+                "Sejarah Terlengkap Peradaban Dunia", "Ensiklopedia Sejarah Islam", 
+                "Sejarah Dunia yang Disembunyikan"
+            ],
+            "penulis": [
+                "Rizem Aizid", "DR. Raghib As-Sirjani", "Jonathan Black"
+            ],
+            "penerbit": [
+                "Noktah", "Al-Kautsar", "Tidak Ada"
+            ],
+            "url": [
+                "./bukuSejarah/bukuSejarah.jpg", "./bukuSejarah/Ensiklopedi-Sejarah-Islam.jpg", 
+                "./bukuSejarah/sejarahDunia.jpg"
+            ]
+        }
+
+        const bukuAgama = {
+            "judul": [
+                "Fiqih Ibadah Madzhab Syafi'i", "Minhajul Muslim", 
+                "Sirah Nabawiyah"
+            ],
+            "penulis": [
+                "Syaikh DR. Alauddin Za'tari", "Syaikh Abu Bakar Jabir Al Jazairy",
+                "Syaikh Shafiyyurrahman Al-Mubarakfuri"
+            ],
+            "Penerbit": [
+                "Al-Kautsar", "Ummul Qura", "Al-Kautsar"
+            ],
+            "url": [
+                "./bukuAgama/fiqih.jpg", "./bukuAgama/minhajulMuslim.jpg", "./bukuAgama/sirahNabawiyah.jpg"
+            ]
+        }
+
+        const bukuNovel = {
+            "judul": [
+                "Bumi", "Laskar Pelangi", "Negeri Para Pedebah", "Orang-Orang Biasa", 
+                "Tenggelamnya Kapal Van der Wijck"
+            ],
+            "penulis": [
+                "Tere Liye", "Andrea Hirata", "Tere Liye", "Andrea Hirata", "Hamka"
+            ],
+            "penerbit": [
+                "Gramedia", "Gramedia", "Gramedia", "Gramedia", "Gema Insani"
+            ],
+            "url": [
+                "./bukuNovel/bumi.jpg", "./bukuNovel/laskarpelangi.jpg", "./bukuNovel/negeriparapedebah.jpg",
+                "./bukuNovel/orang-orang-biasa.jpg", "./bukuNovel/TenggelamnyaKapalvanderwick.jpg"
+            ]
+        }
+
+        const bukuSains = {
+            "judul": [
+                "Brief History of Time", "Ensiklopedia Sains", "Pengantar Fisika Modern", 
+                "Relativitas"
+            ],
+            "penulis": [
+                "Stephen Hawking", "Tidak Ada", "Prof.Dr.Tomo Djujin", "Albert Einstein"
+            ],
+            "penerbit": [
+                "Gramedia", "Gramedia", "D", "Gramedia"
+            ],
+            "url": [
+                "./bukuSains/briefHistoryofTime.jpg", "./bukuSains/ensiklopediaSains.jpg", 
+                "./bukuSains/pengantarFisika.jpg", "./bukuSains/Relativitas.jpg"
+            ]
+        }
+        
+        const perpustakaan = document.getElementById("bukuBuku")
+
+        function buatBuku(judulGambar, linkGambar, deskripsiGambar){
+            const divCol = document.createElement("div");
+            divCol.setAttribute("class", "col-lg-4")
+            divCol.classList.add("col-md-6", "col-sm-6", "mb-3")
+            perpustakaan.appendChild(divCol);
+
+            const divCard = document.createElement("div");
+            divCard.setAttribute("class", "card")
+            divCard.classList.add("border-info")
+            divCol.appendChild(divCard)
+
+            const gambar = document.createElement("img");
+            gambar.setAttribute("src", linkGambar)
+            gambar.setAttribute("class", "card-img-top")
+            gambar.classList.add("gambarBuku")
+            divCard.appendChild(gambar)
+            
+            const divBody = document.createElement("div");
+            divBody.setAttribute("class", "card-body");
+            divCard.appendChild(divBody)
+
+            const judul = document.createElement("h5");
+            judul.setAttribute("class", "card-title");
+            judul.classList.add("mb-3")
+            judul.textContent = judulGambar;
+            divBody.appendChild(judul);
+
+            const deskripsi = document.createElement("p");
+            deskripsi.setAttribute("class", "card-text");
+            deskripsi.textContent = deskripsiGambar;
+            divBody.appendChild(deskripsi);
+            
+            const divDropDown = document.createElement("div");
+            divDropDown.setAttribute("class", "dropdown");
+            divBody.appendChild(divDropDown);
+
+            const button = document.createElement("button");
+            button.setAttribute("class", "btn");
+            button.classList.add("btn-primary", "dropdown-toggle");
+            button.setAttribute("data-bs-toggle", "dropdown");
+            button.textContent = "Lihat Produk";
+            divDropDown.appendChild(button);
+
+            const menuDropDown = document.createElement("ul");
+            menuDropDown.setAttribute("class", "dropdown-menu");
+            menuDropDown.classList.add("dropdown-menu-dark");
+            menuDropDown.setAttribute("aria-labelledby", "dropdownMenuButton1");
+            divDropDown.appendChild(menuDropDown);
+
+            const itemDropDown1 = document.createElement("li");
+            menuDropDown.appendChild(itemDropDown1)
+            const linkDropDown1 = document.createElement("a");
+            linkDropDown1.setAttribute("class", "dropdown-item");
+            linkDropDown1.setAttribute("href", "#");
+            linkDropDown1.textContent = "Lihat Detail";
+            itemDropDown1.appendChild(linkDropDown1)
+
+            const itemDropDown2 = document.createElement("li");
+            menuDropDown.appendChild(itemDropDown2);
+            const horizontalRule = document.createElement("hr");
+            horizontalRule.setAttribute("class", "dropdown-divider");
+            itemDropDown2.appendChild(horizontalRule);
+            
+            const itemDropDown3 = document.createElement("li");
+            menuDropDown.appendChild(itemDropDown3);
+            const linkDropDown2 = document.createElement("a");
+            linkDropDown2.setAttribute("class", "dropdown-item");
+            linkDropDown2.setAttribute("href", "#");
+            linkDropDown2.textContent = "Lihat";
+            itemDropDown3.appendChild(linkDropDown2);
+
+            const footer = document.createElement("div");
+            footer.setAttribute("class", "card-footer");
+            footer.textContent = "footer";
+            divCard.appendChild(footer);
+        }
+
+        let total1;
+        let total2;
+        let total;
+
+        if (bukuSejarah.judul.length > bukuAgama.judul.length){
+            total1 = bukuSejarah.judul.length;
+        }else {
+            total1 = bukuAgama.judul.length;
+        }
+        if (bukuNovel.judul.length > bukuSains.judul.length){
+            total2 = bukuNovel.judul.length;
+        }else {
+            total2 = bukuSains.judul.length;
+        }
+        if (total1 > total2){
+            total = total1;
+        }else {
+            total = total2;
+        }
+
+
+        for (let i = 0; i < total; i++){
+            if (i < bukuAgama.judul.length){
+                buatBuku(bukuAgama.judul[i], bukuAgama.url[i], bukuAgama.penulis[i]);
+            } 
+            if (i < bukuSejarah.judul.length){
+                buatBuku(bukuSejarah.judul[i], bukuSejarah.url[i], bukuSejarah.penulis[i]);
+            } 
+            if (i < bukuNovel.judul.length){
+                buatBuku(bukuNovel.judul[i], bukuNovel.url[i], bukuNovel.penulis[i]);
+            }
+            if (i < bukuSains.judul.length){
+                buatBuku(bukuSains.judul[i], bukuSains.url[i], bukuSains.penulis[i]);
+            }
+        }
+
+        const totalSejarah = document.getElementById("totalSejarah");
+        totalSejarah.textContent = bukuSejarah.judul.length;
+
+        const totalAgama = document.getElementById("totalAgama");
+        totalAgama.textContent = bukuAgama.judul.length;
+
+        const totalNovel = document.getElementById("totalNovel");
+        totalNovel.textContent = bukuNovel.judul.length;
+
+        const totalSains = document.getElementById("totalSains");
+        totalSains.textContent = bukuSains.judul.length;
+
+        function clearBuku(){
+            while (perpustakaan.firstChild){
+                perpustakaan.removeChild(perpustakaan.firstChild);
+            }
+        }
+
+        const klikSejarah = document.getElementById("klikSejarah");
+        klikSejarah.onclick = function(){
+            clearBuku();
+            for (let i = 0; i < bukuSejarah.judul.length; i++){
+                buatBuku(bukuSejarah.judul[i], bukuSejarah.url[i], bukuSejarah.penulis[i])
+            }
+        }
+
+        const klikAgama = document.getElementById("klikAgama");
+        klikAgama.onclick = function(){
+            clearBuku();
+            for (let i = 0; i < bukuAgama.judul.length; i++){
+                buatBuku(bukuAgama.judul[i], bukuAgama.url[i], bukuAgama.penulis[i])
+            }
+        }
+
+        const klikNovel = document.getElementById("klikNovel");
+        klikNovel.onclick = function(){
+            clearBuku();
+            for (let i = 0; i < bukuNovel.judul.length; i++){
+                buatBuku(bukuNovel.judul[i], bukuNovel.url[i], bukuNovel.penulis[i])
+            }
+        }
+
+        const klikSains = document.getElementById("klikSains");
+        klikSains.onclick = function(){
+            clearBuku();
+            for (let i = 0; i < bukuSains.judul.length; i++){
+                buatBuku(bukuSains.judul[i], bukuSains.url[i], bukuSains.penulis[i])
+            }
+        }
+        
+        const klikSemuaBuku = document.getElementById("klikSemuaBuku");
+        klikSemuaBuku.onclick = function(){
+            clearBuku();
+            for (let i = 0; i < total; i++){
+            if (i < bukuAgama.judul.length){
+                buatBuku(bukuAgama.judul[i], bukuAgama.url[i], bukuAgama.penulis[i]);
+            } 
+            if (i < bukuSejarah.judul.length){
+                buatBuku(bukuSejarah.judul[i], bukuSejarah.url[i], bukuSejarah.penulis[i]);
+            } 
+            if (i < bukuNovel.judul.length){
+                buatBuku(bukuNovel.judul[i], bukuNovel.url[i], bukuNovel.penulis[i]);
+            }
+            if (i < bukuSains.judul.length){
+                buatBuku(bukuSains.judul[i], bukuSains.url[i], bukuSains.penulis[i]);
+            }
+        }
+        }
+
+        const totalJudulBuku = [...bukuAgama.judul, ...bukuNovel.judul, ...bukuSejarah.judul, ...bukuSains.judul]
+        const totalLinkGambar = [...bukuAgama.url, ...bukuNovel.url, ...bukuSejarah.url, ...bukuSains.url]
+        const totalPenulisBuku = [...bukuAgama.penulis, ...bukuNovel.penulis, ...bukuSejarah.penulis, ...bukuSains.penulis]
+        
+        const totalBuku = document.getElementById("totalBuku");
+        totalBuku.textContent = totalJudulBuku.length;
+        console.info(totalJudulBuku)
+        function displayBuku(){
+            clearBuku();
+            for (let i = 0; i < totalJudulBuku.length; i++){
+                const judulBuku = totalJudulBuku[i];
+                const linkGambar = totalLinkGambar[i];
+                const penulisBuku = totalPenulisBuku[i];
+
+                const searchText = document.getElementById("searchBuku").value.toLowerCase();
+
+                if (judulBuku.toLowerCase().includes(searchText)){
+                    buatBuku(judulBuku, linkGambar, penulisBuku);
+                }
+
+            }
+        }
+
+        const searchBuku = document.getElementById("searchBuku");
+        searchBuku.onkeyup = function (){
+            displayBuku();
+        };
+        searchBuku.onkeydown = function(){
+            displayBuku();
+        };
+        
+        </script>
+
+        <script src="../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

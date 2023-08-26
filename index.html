@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Navbar" width="50px">
+                Beranda
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start align-items-md-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3 mb-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="container-fluid banner">
+        <div class="container banner-content col-lg-6">
+            <div class="text-center kontenBanner">
+                <p class="fs-1">
+                    Selamat Datang
+                </p>
+                <p>
+                    Website Portofolio Mahadi
+                </p>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalDirect">
+                    Masuk
+                </button>
+                <!-- Modal -->
+                <div class="modal fade text-dark" id="modalDirect" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Halaman yang ingin dituju</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="mb-3 text-start ms-2 mt-2">
+                                <a class="btn btn-outline-dark" href="artikel/artikel.html" role="button">1. Halaman Artikel</a>
+                            </div>
+                            <div class="mb-3 text-start ms-2">
+                                <a class="btn btn-outline-dark" href="Buku/buku.html" role="button">2. Halaman Buku</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
