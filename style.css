@@ -1,13 +1,13 @@
 .banner {
     height: 91vh;
     background-color: skyblue;
-    background: url(images/bukit.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/StockSnap_XHLXOTTNL9.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .banner-tentang {
-    height: 100vh;
+    height: auto;
     background-color: skyblue;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/giphy.gif);
     background-size: 100vh;
@@ -47,7 +47,7 @@
 }
 
 .footer {
-    height: 10vh;
+    height: 6vh;
 }
 
 
@@ -75,7 +75,7 @@
     }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 767px){
+@media only screen and (min-width: 280px) and (max-width: 767px){
     .gambarBuku {
         width: 244px;
         height: 343px;
