@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="../style.css">
 
 </head>
+
 <body>
 
+    <div class="container-fluid banner-tentang">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent sticky-top" style="margin-left: 40%;">
 
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../images/MDN.jpeg" class="me-2 borderRadius" alt="Navbar" width="50px">
+        <div class="container-fluid mt-3">
+            <a class="navbar-brand" class="me-5" href="./index.html">
                 Tentang
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -25,16 +26,16 @@
             </button>
             <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Tentang Saya</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-start align-items-md-center flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-start align-items-md-center flex-grow-1 pe-3 ms-2">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle ms-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Link
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
@@ -46,26 +47,65 @@
                                 <li><a class="dropdown-item" href="https://www.linkedin.com/in/mahadi-dwi-nugraha-b55647250">Linkedin</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ms-3">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Halaman
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><a class="dropdown-item" href="../artikel/artikel.html">Artikel</a></li>
                                 <li><a class="dropdown-item" href="../Buku/buku.html">Buku</a></li>
+                                <li><a class="dropdown-item" href="../tentang/index.html">Tentang</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3 mb-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Cari Buku" aria-label="Search" id="searchBuku">
-                        <button class="btn btn-success" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Search</button>
-                    </form>
                 </div>
             </div>
         </div>
     </nav>
 
-    <script src="../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Banner -->
+    <div class="container-fluid">
+        <div class="container banner-content-tentang">
+            <div class="mt-5">
+                <h1 class="mb-5 d-none d-md-block">Profil Saya</h1>
+
+                <table class="d-none d-md-block">
+                    <tr>
+                        <td rowspan="5">
+                            <img src="../images/gambaranim.jpg" class="ukuranFoto" alt="Foto Profil">
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="d-inline-block">
+                            <h3 class="ms-3 mb-3">Nama : Mahadi Dwi Nugraha</h3>
+                            <h3 class="ms-3 mb-3">Hobi : Tidak ada</h3>
+                            <h3 class="ms-3 mb-3">Keahlian : Full Stack</h3>
+                        </td>
+                    </tr>
+                </table>
+                <div class="d-block d-md-none justify-content-center text-center ms-3">
+
+                    <h1 class="mb-5">Profil Saya</h1>
+                    <img src="../images/gambaranim.jpg" class="ukuranFoto" alt="Foto Profil">
+                    <h3 class="mb-3 mt-5">Nama : Mahadi Dwi Nugraha</h3>
+                    <h3 class="ms-3 mb-3">Hobi : Tidak ada</h3>
+                    <h3 class="ms-3 mb-3">Keahlian : Full Stack</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="d-flex bg-transparent justify-content-center align-content-center align-items-center position-relative mt-4">
+    <h5 class="text-light mt-5">Copyright &copy; 2023 MDN</h5>
+    </div>
+
+    </div>
+
+
+    <script src="../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>  
     
 </body>
 </html>

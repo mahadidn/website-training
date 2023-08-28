@@ -6,12 +6,26 @@
     background-position: center;
 }
 
+.banner-tentang {
+    height: 100vh;
+    background-color: skyblue;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/giphy.gif);
+    background-size: 100vh;
+    background-position: center;
+}
+
 .banner-content {
     height: 90vh;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.banner-content-tentang {
+    height: 80vh;
+    color: white;
+    display: flex;
 }
 
 .banner-content-artikel {
@@ -42,6 +56,11 @@
         width: 214px;
         height: 301px;
     }
+    .ukuranFoto {
+        height: 300px;
+        width: 200px;
+        border-radius: 10px;
+    }
 }
 
 @media only screen and (min-width: 1400px){
@@ -49,12 +68,22 @@
         width: 304px;
         height: 417px;
     }
+    .ukuranFoto {
+        height: 300px;
+        width: 200px;
+        border-radius: 10px;
+    }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px){
+@media only screen and (min-width: 375px) and (max-width: 767px){
     .gambarBuku {
         width: 244px;
         height: 343px;
+    }
+    .ukuranFoto {
+        height: 240px;
+        width: 144px;
+        border-radius: 10px;
     }
 }
 
@@ -62,5 +91,10 @@
     .gambarBuku {
         width: 259px;
         height: 364px;
+    }
+    .ukuranFoto {
+        height: 300px;
+        width: 200px;
+        border-radius: 10px;
     }
 }
