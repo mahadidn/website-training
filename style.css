@@ -23,7 +23,7 @@
 }
 
 .banner-content-tentang {
-    height: 80vh;
+    height: 90vh;
     color: white;
     display: flex;
 }
@@ -58,7 +58,7 @@
     }
     .ukuranFoto {
         height: 300px;
-        width: 200px;
+        width: 300px;
         border-radius: 10px;
     }
 }
@@ -70,7 +70,7 @@
     }
     .ukuranFoto {
         height: 300px;
-        width: 200px;
+        width: 300px;
         border-radius: 10px;
     }
 }
@@ -82,7 +82,7 @@
     } */
     .ukuranFoto {
         height: 200px;
-        width: 144px;
+        width: 200px;
         border-radius: 10px;
     }
 }
@@ -94,7 +94,7 @@
     }
     .ukuranFoto {
         height: 300px;
-        width: 200px;
+        width: 300px;
         border-radius: 10px;
     }
 }
