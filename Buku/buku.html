@@ -13,20 +13,20 @@
 <body>
 
         <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-dark sticky-top">
 
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
                 <img src="../images/MDN.jpeg" class="me-2 borderRadius" alt="Navbar" width="50px">
                 Buku
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="collapse navbar-collapse" tabindex="-1" id="collapseNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start align-items-md-center flex-grow-1 pe-3">
@@ -43,7 +43,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="https://www.linkedin.com/in/mahadi-dwi-nugraha-b55647250">Linkedin</a></li>
+                                <!-- <li><a class="dropdown-item" href="https://www.linkedin.com/in/mahadi-dwi-nugraha-b55647250">Linkedin</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -59,7 +59,7 @@
                     </ul>
                     <form class="d-flex mt-3 mb-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Cari Buku" aria-label="Search" id="searchBuku">
-                        <button class="btn btn-success" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Search</button>
+                        <button class="btn btn-success" type="button" data-bs-dismiss="collapse" aria-label="Close"class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">Search</button>
                     </form>
                 </div>
             </div>
@@ -75,23 +75,23 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 mb-3">
                         <div class="list-group">
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSejarah">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center filter-buku" id="klikSejarah">
                                 Buku Sejarah
                                 <span class="badge bg-primary rounded-pill" id="totalSejarah"></span>
                             </a>
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikNovel">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center filter-buku" id="klikNovel">
                                 Buku Novel
                                 <span class="badge bg-primary rounded-pill" id="totalNovel"></span>
                             </a>
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikAgama">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center filter-buku" id="klikAgama">
                                 Buku Agama
                                 <span class="badge bg-primary rounded-pill" id="totalAgama"></span>
                             </a>
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSains">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center filter-buku" id="klikSains">
                                 Buku Sains
                                 <span class="badge bg-primary rounded-pill" id="totalSains"></span>
                             </a>
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center" id="klikSemuaBuku">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center filter-buku" id="klikSemuaBuku">
                                 Semua Buku
                                 <span class="badge bg-primary rounded-pill" id="totalBuku"></span>
                             </a>
@@ -192,7 +192,7 @@
         function buatBuku(judulGambar, linkGambar, deskripsiGambar){
             const divCol = document.createElement("div");
             divCol.setAttribute("class", "col-lg-4")
-            divCol.classList.add("col-md-6", "col-sm-6", "mb-3")
+            divCol.classList.add("col-md-6", "col-sm-6", "col-xs-6", "mb-3")
             perpustakaan.appendChild(divCol);
 
             const divCard = document.createElement("div");

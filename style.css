@@ -80,11 +80,17 @@
         width: 244px;
         height: 343px;
     } */
+    .col-xs-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
     .ukuranFoto {
         height: 200px;
         width: 200px;
         border-radius: 10px;
     }
+
+    .bg-transparent-hp{--bs-bg-opacity:1;background-color:transparent!important}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px){
@@ -97,4 +103,8 @@
         width: 300px;
         border-radius: 10px;
     }
+}
+
+.filter-buku:hover {
+    background-color: gray;
 }
